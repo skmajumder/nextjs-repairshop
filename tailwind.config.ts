@@ -1,14 +1,12 @@
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 
 const config = {
   darkMode: "class",
-  // `content` is optional in v4
+  // `content` is optional in v4.
   theme: {
     extend: {
-      backgroundImage: {
-        "home-img": "url('/images/home-img.jpg')",
-      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -44,11 +42,11 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
+          1: "hsl(var(--chart-1))",
+          2: "hsl(var(--chart-2))",
+          3: "hsl(var(--chart-3))",
+          4: "hsl(var(--chart-4))",
+          5: "hsl(var(--chart-5))",
         },
       },
       borderRadius: {
@@ -58,20 +56,12 @@ const config = {
       },
       keyframes: {
         appear: {
-          from: {
-            opacity: "0",
-          },
-          to: {
-            opacity: "1",
-          },
+          from: { opacity: "0" },
+          to: { opacity: "1" },
         },
         slide: {
-          from: {
-            transform: "translateX(100%)",
-          },
-          to: {
-            transform: "translateX(0%)",
-          },
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(0%)" },
         },
       },
       animation: {
