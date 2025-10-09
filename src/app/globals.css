@@ -126,3 +126,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Keyframes */
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(5%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@utility animate-appear {
+  animation: appear 1s ease-in-out;
+}
+
+@utility animate-slide {
+  animation: slide 750ms ease-in-out;
+}
+
+/* Optional: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-appear,
+  .animate-slide {
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+  }
+}
