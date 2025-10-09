@@ -2,7 +2,7 @@ import * as React from "react";
 import { HomeIcon, File, UsersRound } from "lucide-react";
 import Link from "next/link";
 import NavButton from "./NavButton";
-import { ModeToggle } from "./ModeToggle";
+import ModeToggle from "./ModeToggle";
 
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {};
 
