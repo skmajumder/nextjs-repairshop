@@ -2,13 +2,14 @@ import * as React from "react";
 import { HomeIcon, File, UsersRound } from "lucide-react";
 import Link from "next/link";
 import NavButton from "./NavButton";
+import { ModeToggle } from "./ModeToggle";
 
 export type HeaderProps = React.ComponentPropsWithoutRef<"header"> & {};
 
 export default function Header({ className, ...props }: HeaderProps) {
   return (
     <header
-      className={`animate-slide sticky top-0 z-20 h-12 border-b bg-background p-2 ${className ?? ""}`}
+      className={`sticky top-0 z-20 h-12 animate-slide border-b bg-background p-2 ${className ?? ""}`}
       {...props}
     >
       <div className="flex h-8 w-full items-center justify-between">
@@ -27,6 +28,7 @@ export default function Header({ className, ...props }: HeaderProps) {
         <div className="flex items-center">
           <NavButton href="/tickets" label="Tickets" icon={File} />
           <NavButton href="/customers" label="Customers" icon={UsersRound} />
+          <ModeToggle />
         </div>
       </div>
     </header>
